@@ -160,7 +160,7 @@ def setup_model():
     )
     parser.add_argument(
         "--model_name_or_path",
-        default="ruGPT3medium",
+        default="./ruGPT3medium_psy",
         type=str,
         required=False,
         help="Path to pre-trained model or shortcut name selected in the list: " + ", ".join(MODEL_CLASSES.keys()),
@@ -208,7 +208,6 @@ def setup_model():
 
     args.length = adjust_length_to_model(args.length, max_sequence_length=model.config.max_position_embeddings)
     logger.info(args)
-    # total_sequence = get_sequence(text, args, tokenizer, model)
 
     return args, tokenizer, model
 
