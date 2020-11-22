@@ -12,8 +12,8 @@ def read_file(filename):
 
 
 def parse_and_save():
-    # for parser in [b17_parser, psy_files_parser, psy_practice_parser]:
-    #     parser.parse_and_save()
+    for parser in [b17_parser, psy_files_parser, psy_practice_parser]:
+        parser.parse_and_save()
 
     train_text = b''
     for filename in ['b17.txt', 'psy_files.txt', 'psy_practice.txt']:
